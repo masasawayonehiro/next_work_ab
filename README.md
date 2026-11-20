@@ -2,7 +2,9 @@
 
 札幌市の就労系障害福祉サービス（就労選択支援・就労移行支援・就労継続支援A型/B型・就労定着支援）の事業所と、
 ハローワークの障害者求人をまとめて探せるサイトです。
-<img width="1920" height="911" alt="image" src="https://github.com/user-attachments/assets/aeef47d3-4354-4df0-8115-6ce842b41c41" />
+
+<img width="1920" height="4664" alt="image" src="https://github.com/user-attachments/assets/2ea2c1d5-bfc5-4c92-94de-9d1a90945ad1" />
+
 
 | フォルダ | 中身 |
 |---|---|
