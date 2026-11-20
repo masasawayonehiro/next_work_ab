@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare Pages プロジェクト名 → https://next-work-sapporo.pages.dev
+  "name": "next-work-sapporo",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "pages_build_output_dir": "out",
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "next-work-sapporo",
+      "database_id": "010dccb1-dc58-4251-bf87-67559e7d3f28",
+      // Pages のローカル開発（wrangler pages dev）用
+      "preview_database_id": "DB"
+    }
+  ]
+}

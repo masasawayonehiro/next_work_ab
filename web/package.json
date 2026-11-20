@@ -1,0 +1,42 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:pages": "next build && wrangler pages dev out --port 8787",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "data": "node scripts/build-data.mjs && node ../scraper/export-site.mjs",
+    "data:d1": "node ../scraper/load-d1.mjs --remote",
+    "data:d1:local": "node ../scraper/load-d1.mjs --local",
+    "preview": "npm run dev:pages",
+    "deploy": "next build && wrangler pages deploy out --project-name=next-work-sapporo --branch=main --commit-dirty=true",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:integration": "vitest run --project integration",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.17",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5",
+    "vitest": "^5.1.1",
+    "wrangler": "^4.165.0"
+  }
+}

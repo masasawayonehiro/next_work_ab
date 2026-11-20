@@ -1,0 +1,9 @@
+/* site と同じデザインシートを取り込む */
+@import "../../public/assets/css/style.css";
+
+/* next/font の変数を site のトークン名へ接続する */
+:root {
+  --font-body: var(--nw-font-body), "Noto Sans JP", system-ui, sans-serif;
+  --font-round: var(--nw-font-round), "Zen Maru Gothic", var(--font-body);
+  --font-latin: var(--nw-font-latin), "Quicksand", var(--font-round);
+}

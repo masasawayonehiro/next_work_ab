@@ -1,0 +1,30 @@
+---
+description: プロジェクト全体の前提と、作業前に読む文書（常に適用）
+alwaysApply: true
+---
+
+# プロジェクトの前提
+
+- このサイトは「next work 札幌」（旧称：さっぽろ就労支援ナビ）。札幌市の就労系障害福祉サービスの事業所と、ハローワークの障害者求人を探すためのサイト。
+- 見た目・操作は `site/` プロトタイプに合わせる（白〜ピンク、さがす／マイページ、詳細はモーダル）。
+- 主な利用者は障害のある方とその支援者。**分かりやすさ・操作のしやすさを優先**する（文字サイズは site の 15px 基準）。
+- 画面の文言・コメント・ドキュメント・コミットメッセージは**日本語**で書く。
+
+## 作業を始める前に読むもの
+
+1. [README.md](../../README.md) … 起動・データ更新・デプロイの手順
+2. [docs/requirements.md](../../docs/requirements.md) … 要件定義書（何を作るか・作らないか）
+3. [docs/design.md](../../docs/design.md) … 設計書（構成・データモデル・レンダリング方式）
+4. このフォルダの他のルール（coding-standards / testing / git / accessibility / data-sources）
+
+## ドキュメントの更新
+
+- 機能・画面・データ項目・コマンドを変えたら、**同じ作業の中で** `docs/` と `README.md` の該当箇所を更新する。
+- 要件定義書の機能一覧（FR-xx）の「状態」も更新する。
+- 要件にない機能を追加したくなったら、作る前に利用者（依頼者）に確認する。
+
+## 技術スタック
+
+- Next.js 16（App Router）、React 19、TypeScript、Tailwind CSS 4
+- OpenNext（`@opennextjs/cloudflare`）で Cloudflare Workers に配置
+- Next.js 16 は以前の版と API や規約が違うことがある。コードを書く前に `node_modules/next/dist/docs/` の該当ガイドを読む（[AGENTS.md](../../AGENTS.md) 参照）。

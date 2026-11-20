@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web-workers-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--prefix", "web", "opennextjs-cloudflare", "preview", "--port", "8787"],
+      "cwd": "web",
+      "port": 8787
+    }
+  ]
+}
